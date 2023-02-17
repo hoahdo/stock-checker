@@ -1,9 +1,11 @@
-import Welcome from "./Welcome";
+import Header from "./Header";
+import Upload from "./Upload";
 
 function App() {
 	return (
 		<div className="App">
-			<Welcome />
+            <Header />
+            <Upload />
 		</div>
 	);
 }
