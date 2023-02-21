@@ -2,8 +2,18 @@ function Upload() {
 	return (
 		<div className="upload--container">
             <h1>Drop file into dropbox</h1>
-            <form>
-                <input type="file" id="dropbox" name="fileupload"/>
+            <form
+                action=""
+                className="upload-form"
+                onClick={(e) => console.log(e.target)}
+            >
+                <input
+                    type="file"
+                    id="dropbox"
+                    name="fileupload"
+                    className="input-field" 
+                    onClick={(e) => console.log(e.target)}
+                />
                 <input type="submit"/>
             </form>
 		</div>
