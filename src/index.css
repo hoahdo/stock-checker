@@ -10,45 +10,87 @@ font-family: 'Roboto', sans-serif;
 
 * {
 	box-sizing: border-box;
-    margin: 0px;
-    color: #303030;
-    font-family: 'Roboto', sans-serif;
+	margin: 0px;
+	color: #303030;
+	font-family: "Roboto", sans-serif;
 }
 
 body {
-    background-color: #F7EDE2;
-    padding: 25px;
+	background-color: #f7ede2;
+	padding: 25px;
 }
 
+/**** HEADER ****/
 .header--container {
-    background-color: #F6BD60;
-    text-align: center;
-    border-radius: 25px;
-    padding: 20px;
-    margin-bottom: 20px;
-    border: solid 3px #84A59D;    
+	background-color: #F8858B;
+	text-align: center;
+	border-radius: 25px;
+	padding: 20px;
+	margin-bottom: 20px;
+	border: solid 3px #84a59d;
 }
 
-
-
+/**** UPLOAD ****/
 .upload--container {
-    background-color: #F6BD60;
-    border-radius: 25px;
-    padding: 20px;
-    border: solid 3px #84A59D;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	background-color: #f6bd60;
+	border-radius: 25px;
+	padding: 20px;
+	border: solid 3px #84a59d;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-.upload-form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    cursor: pointer;
-    border: 2px dashed #1475CF;
-    border-radius: 5px;
-    height: 250px;
-    width: 50%;
+.upload-field {
+	background-color: #fcd299;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 2px dashed #1475cf;
+	border-radius: 5px;
+	height: 300px;
+	width: 75%;
+}
+
+.upload-icon {
+	width: 50px;
+	height: 50px;
+	margin-bottom: 20px;
+}
+
+.upload-field p {
+	font-weight: 800;
+	font-size: 1.25rem;
+	margin-bottom: 20px;
+}
+
+.upload-or-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.upload-or-container hr {
+	border: 1px solid #303030;
+	width: 100px;
+	margin: 0px 10px 20px 10px;
+}
+
+.upload-or-container p {
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.upload-button {
+	cursor: pointer;
+	width: 100px;
+	height: 35px;
+	color: #faf9f6;
+	background-color: #303030;
+	border-style: none;
+	border-radius: 5px;
+	font-family: "Roboto", sans-serif;
+	font-weight: 600;
+	margin-bottom: 20px;
 }
