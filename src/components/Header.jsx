@@ -1,7 +1,7 @@
 function Header() {
 	return (
 		<div className="header--container">
-			<h1>Drag and drop your text file into the box below</h1>
+			<h1>Stock Checker</h1>
 		</div>
 	);
 }

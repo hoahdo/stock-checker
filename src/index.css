@@ -17,17 +17,15 @@ font-family: 'Roboto', sans-serif;
 
 body {
 	background-color: #f7ede2;
-	padding: 25px;
 }
 
 /**** HEADER ****/
 .header--container {
 	background-color: #F8858B;
 	text-align: center;
-	border-radius: 25px;
 	padding: 20px;
 	margin-bottom: 20px;
-	border: solid 3px #84a59d;
+
 }
 
 /**** UPLOAD ****/
@@ -39,6 +37,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+    margin: 0px 5% 0px 5%;
 }
 
 .upload-field {
@@ -93,4 +92,18 @@ body {
 	font-family: "Roboto", sans-serif;
 	font-weight: 600;
 	margin-bottom: 20px;
+}
+
+/**** UPLOADED FILES ****/
+
+
+
+.text-file-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.close-icon {
+    width: 25px;
+    height: 25px;
 }
