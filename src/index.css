@@ -11,15 +11,22 @@ body {
 
 /**** HEADER ****/
 .header--container {
-	background-color: #f8858b;
+	background-color: #303030;
 	text-align: center;
 	padding: 20px;
 	margin-bottom: 20px;
 }
 
+.header--container h1 {
+    color:whitesmoke;
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 2.5rem;
+}
+
 /**** UPLOAD ****/
 .upload--container {
-	background-color: #f6bd60;
+	background-color: #FFD68A;
 	border-radius: 25px;
 	padding: 20px;
 	border: solid 3px #84a59d;
@@ -31,13 +38,13 @@ body {
 
 /**** DROPBOX ****/
 .upload-field {
-	background-color: #fcd299;
+	background-color: #FFB52E;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	border: 2px dashed #1475cf;
-	border-radius: 5px;
+	border-radius: 10px;
 	height: 300px;
 	width: 75%;
 }
@@ -46,6 +53,7 @@ body {
 	width: 50px;
 	height: 50px;
 	margin-bottom: 20px;
+    ;
 }
 
 .upload-field p {
@@ -73,24 +81,42 @@ body {
 
 .upload-button {
 	cursor: pointer;
-	width: 100px;
-	height: 35px;
 	color: #faf9f6;
-	background-color: #303030;
+	background-color: #FF5349;
 	border-style: none;
 	border-radius: 5px;
 	font-family: "Roboto", sans-serif;
+    font-size: 1rem;
 	font-weight: 600;
+    letter-spacing: 1px;
+    padding: 10px;
 	margin-bottom: 20px;
 }
 
 /**** FILES ****/
+.files--container {
+    /* background-color: #f8858b; */
+    background-color: #77dd77;
+    border-radius: 5px;
+    margin: 20px;
+    padding: 10px;
+}
+
+.file-upload-wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+}
+
 .text-file-icon {
-	width: 25px;
-	height: 25px;
+	height: 30px;
+}
+
+.file-name {
+    font-size: 1.05rem;
 }
 
 .close-icon {
-	width: 25px;
 	height: 25px;
+    cursor: pointer;
 }

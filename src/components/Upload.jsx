@@ -4,7 +4,7 @@ import DropBox from "./DropBox";
 import Files from "./Files";
 
 function Upload() {
-	const [fileName, setFileName] = useState("No files selected");
+	const [fileName, setFileName] = useState("No file selected");
 	const [fileData, setFileData] = useState("");
 
 	useEffect(() => {
@@ -19,15 +19,24 @@ function Upload() {
 		setFileData(newFileData);
 	}
 
+    function removeFile() {
+        setFileName("No file selected")
+        setFileData("")
+    }
+
 	return (
-		<div className="upload--container">
+		<main className="upload--container">
 			<h1>Drop file into box below</h1>
 			<DropBox
 				updateFileName={updateFileName}
 				updateFileData={updateFileData}
 			/>
-			<Files fileName={fileName} fileData={fileData} />
-		</div>
+            <Files
+                fileName={fileName}
+                fileData={fileData}
+                removeFile={ removeFile}    
+            />
+		</main>
 	);
 }
 

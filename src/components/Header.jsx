@@ -1,8 +1,8 @@
 function Header() {
 	return (
-		<div className="header--container">
+		<header className="header--container">
 			<h1>Stock Checker</h1>
-		</div>
+		</header>
 	);
 }
 
