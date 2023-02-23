@@ -4,8 +4,8 @@ import Upload from "./components/Upload";
 function App() {
 	return (
 		<div className="App">
-            <Header />
-            <Upload />
+			<Header />
+			<Upload />
 		</div>
 	);
 }
