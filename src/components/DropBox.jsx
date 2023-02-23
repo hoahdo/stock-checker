@@ -1,20 +1,26 @@
 function DropBox({ updateFileName, updateFileData, updateFileType }) {
 	function handleDragEnter(event) {
+		const dropbox = document.getElementById("dropbox");
+		dropbox.classList.add("upload-field-hover");
 		event.preventDefault();
 	}
 
 	function handleDragLeave(event) {
+		const dropbox = document.getElementById("dropbox");
+		dropbox.classList.remove("upload-field-hover");
 		event.preventDefault();
 	}
 
 	function handleDragOver(event) {
+		const dropbox = document.getElementById("dropbox");
+		dropbox.classList.add("upload-field-hover");
 		event.preventDefault();
 	}
 
 	function handleDrop(event) {
+		const dropbox = document.getElementById("dropbox");
+		dropbox.classList.remove("upload-field-hover");
 		event.preventDefault();
-		// console.log("File dropped");
-
 		const file = event.dataTransfer.files[0];
 		readUploadedFile(file);
 	}
@@ -41,6 +47,7 @@ function DropBox({ updateFileName, updateFileData, updateFileType }) {
 
 	return (
 		<form
+			id="dropbox"
 			className="upload-field"
 			onDragEnter={(event) => handleDragEnter(event)}
 			onDragLeave={(event) => handleDragLeave(event)}

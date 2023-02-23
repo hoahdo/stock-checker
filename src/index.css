@@ -43,10 +43,14 @@ body {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	border: 2px dashed #1475cf;
+	border: 2px dashed #84a59d;
 	border-radius: 10px;
 	height: 300px;
 	width: 80%;
+}
+
+.upload-field-hover {
+    opacity: 50%;
 }
 
 .upload-icon {
