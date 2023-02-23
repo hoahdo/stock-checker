@@ -46,7 +46,7 @@ body {
 	border: 2px dashed #1475cf;
 	border-radius: 10px;
 	height: 300px;
-	width: 75%;
+	width: 80%;
 }
 
 .upload-icon {
@@ -93,6 +93,11 @@ body {
 	margin-bottom: 20px;
 }
 
+.upload-button:hover {
+    transition: all 0.1s ease-in-out;
+    transform: scale(0.95);
+}
+
 /**** FILES ****/
 .files--container {
     /* background-color: #f8858b; */
@@ -100,6 +105,7 @@ body {
     border-radius: 5px;
     margin: 20px;
     padding: 10px;
+    max-width: 80%;
 }
 
 .file-upload-wrapper {
@@ -109,14 +115,24 @@ body {
 }
 
 .text-file-icon {
-	height: 30px;
+	height: 50px;
 }
 
 .file-name {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-align: center;
 }
 
 .close-icon {
 	height: 25px;
     cursor: pointer;
+    border-radius: 25%;
+}
+
+.close-icon:hover {
+    border-radius: 25%;
+    background-color: #fc2e20;
+    opacity: 100%;
 }

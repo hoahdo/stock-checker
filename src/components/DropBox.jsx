@@ -1,22 +1,19 @@
-function DropBox({ updateFileName, updateFileData }) {
+function DropBox({ updateFileName, updateFileData, updateFileType }) {
 	function handleDragEnter(event) {
 		event.preventDefault();
-		// console.log("File has entered")
 	}
 
 	function handleDragLeave(event) {
 		event.preventDefault();
-		// console.log("File has left")
 	}
 
 	function handleDragOver(event) {
 		event.preventDefault();
-		// console.log("File has dragged over")
 	}
 
 	function handleDrop(event) {
 		event.preventDefault();
-		console.log("File dropped");
+		// console.log("File dropped");
 
 		const file = event.dataTransfer.files[0];
 		readUploadedFile(file);
@@ -29,7 +26,9 @@ function DropBox({ updateFileName, updateFileData }) {
 
 	function readUploadedFile(file) {
 		let readFile = new FileReader();
+
 		updateFileName(file.name);
+		updateFileType(file.type);
 
 		readFile.readAsText(file);
 
