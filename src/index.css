@@ -18,15 +18,15 @@ body {
 }
 
 .header--container h1 {
-    color:whitesmoke;
-    font-weight: 700;
-    letter-spacing: 3px;
-    font-size: 2.5rem;
+	color: whitesmoke;
+	font-weight: 700;
+	letter-spacing: 3px;
+	font-size: 2.5rem;
 }
 
 /**** UPLOAD ****/
 .upload--container {
-	background-color: #FFD68A;
+	background-color: #ffd68a;
 	border-radius: 25px;
 	padding: 20px;
 	border: solid 3px #84a59d;
@@ -38,7 +38,7 @@ body {
 
 /**** DROPBOX ****/
 .upload-field {
-	background-color: #FFB52E;
+	background-color: #ffb52e;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -50,14 +50,13 @@ body {
 }
 
 .upload-field-hover {
-    opacity: 50%;
+	opacity: 50%;
 }
 
 .upload-icon {
 	width: 50px;
 	height: 50px;
 	margin-bottom: 20px;
-    ;
 }
 
 .upload-field p {
@@ -86,36 +85,34 @@ body {
 .upload-button {
 	cursor: pointer;
 	color: #faf9f6;
-	background-color: #FF5349;
+	background-color: #ff5349;
 	border-style: none;
 	border-radius: 5px;
 	font-family: "Roboto", sans-serif;
-    font-size: 1rem;
+	font-size: 1rem;
 	font-weight: 600;
-    letter-spacing: 1px;
-    padding: 10px;
+	letter-spacing: 1px;
+	padding: 10px;
 	margin-bottom: 20px;
 }
 
 .upload-button:hover {
-    transition: all 0.1s ease-in-out;
-    transform: scale(0.95);
+	transition: all 0.1s ease-in-out;
+	transform: scale(0.95);
 }
 
 /**** FILES ****/
 .files--container {
-    /* background-color: #f8858b; */
-    background-color: #77dd77;
-    border-radius: 5px;
-    margin: 20px;
-    padding: 10px;
-    max-width: 80%;
+	max-width: 100%;
+	padding: 15px;
 }
 
 .file-upload-wrapper {
-    display: flex;
-    align-items: center;
-    column-gap: 15px;
+	display: flex;
+	align-items: center;
+	column-gap: 15px;
+	padding: 10px;
+	border-radius: 10px;
 }
 
 .text-file-icon {
@@ -123,20 +120,26 @@ body {
 }
 
 .file-name {
-    font-size: 1.1rem;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-align: center;
+	font-size: 1.1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-align: left;
 }
 
 .close-icon {
 	height: 25px;
-    cursor: pointer;
-    border-radius: 25%;
+	cursor: pointer;
+	border-radius: 25%;
 }
 
 .close-icon:hover {
-    border-radius: 25%;
-    background-color: #fc2e20;
-    opacity: 100%;
+	border-radius: 25%;
+	background-color: #fc2e20;
+	opacity: 100%;
+}
+
+.alert-message {
+	padding: 5px;
+	text-align: center;
+	font-size: 1rem;
 }

@@ -1,4 +1,9 @@
-function DropBox({ updateFileName, updateFileData, updateFileType }) {
+function DropBox({
+	updateFileName,
+	updateFileData,
+	updateFileType,
+	updateFileIcon,
+}) {
 	function handleDragEnter(event) {
 		const dropbox = document.getElementById("dropbox");
 		dropbox.classList.add("upload-field-hover");
@@ -35,6 +40,12 @@ function DropBox({ updateFileName, updateFileData, updateFileType }) {
 
 		updateFileName(file.name);
 		updateFileType(file.type);
+
+		if (file.type === "text/plain") {
+			updateFileIcon("correct");
+		} else {
+			updateFileIcon("wrong");
+		}
 
 		readFile.readAsText(file);
 

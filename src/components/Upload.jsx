@@ -4,9 +4,10 @@ import DropBox from "./DropBox";
 import Files from "./Files";
 
 function Upload() {
-	const [fileName, setFileName] = useState("No file selected");
-    const [fileData, setFileData] = useState("");
-    const [fileType, setFileType] = useState("");
+	const [fileName, setFileName] = useState("No file uploaded");
+	const [fileData, setFileData] = useState("");
+	const [fileType, setFileType] = useState("");
+	const [fileIcon, setFileIcon] = useState("missing");
 
 	useEffect(() => {
 		console.log(fileData);
@@ -20,30 +21,37 @@ function Upload() {
 		setFileData(newFileData);
 	}
 
-    function updateFileType(newFileType) {
-        setFileType(newFileType)
-    }
+	function updateFileType(newFileType) {
+		setFileType(newFileType);
+	}
 
-    function removeFile() {
-        setFileName("No file selected")
-        setFileData("")
-        setFileType("")
-    }
+	function updateFileIcon(newFileIcon) {
+		setFileIcon(newFileIcon);
+	}
+
+	function removeFile() {
+		setFileName("No file uploaded");
+		setFileData("");
+		setFileType("");
+		setFileIcon("missing");
+	}
 
 	return (
 		<main className="upload--container">
 			<h1>Drop file into box below</h1>
 			<DropBox
 				updateFileName={updateFileName}
-                updateFileData={updateFileData}
-                updateFileType={updateFileType}
+				updateFileData={updateFileData}
+				updateFileType={updateFileType}
+				updateFileIcon={updateFileIcon}
 			/>
-            <Files
-                fileName={fileName}
-                fileData={fileData}
-                fileType={fileType}
-                removeFile={ removeFile}    
-            />
+			<Files
+				fileName={fileName}
+				fileData={fileData}
+				fileType={fileType}
+				fileIcon={fileIcon}
+				removeFile={removeFile}
+			/>
 		</main>
 	);
 }
