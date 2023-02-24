@@ -3,25 +3,14 @@ import SetDate from "./SetDate";
 import DropBox from "./DropBox";
 import Files from "./Files";
 import FetchPrices from "./FetchPrices";
+import { getCurrentDate } from "./utils";
 
 function Upload() {
 	const [fileName, setFileName] = useState("No file uploaded");
 	const [fileData, setFileData] = useState("");
 	const [fileType, setFileType] = useState("");
 	const [fileIcon, setFileIcon] = useState("missing");
-	const [checkDate, setCheckDate] = useState(() => {
-		const localDate = new Date();
-		let year = localDate.getFullYear();
-		let month = localDate.getMonth() + 1;
-		let day = localDate.getDate();
-
-		month.toString().length == 1 ? (month = `0${month}`) : (month = `${month}`);
-
-		day.toString().length == 1 ? (day = `$0${day}`) : (day = `${day}`);
-
-		let currentDate = `${year}-${month}-${day}`;
-		return currentDate;
-	});
+	const [checkDate, setCheckDate] = useState(() => getCurrentDate());
 
 	function updateFileName(newFileName) {
 		setFileName(newFileName);
@@ -67,7 +56,15 @@ function Upload() {
 				fileIcon={fileIcon}
 				removeFile={removeFile}
 			/>
-			{fileType === "text/plain" ? <FetchPrices fileType={fileType} /> : ""}
+			{fileType === "text/plain" ? (
+				<FetchPrices
+					fileType={fileType}
+					fileData={fileData}
+					checkDate={checkDate}
+				/>
+			) : (
+				""
+			)}
 		</main>
 	);
 }

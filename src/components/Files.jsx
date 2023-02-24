@@ -7,7 +7,7 @@ function Files({ fileName, fileData, fileType, fileIcon, removeFile }) {
 			backgroundColor: "#77dd77",
 		};
 	} else if (fileIcon === "wrong") {
-		message = "Please upload a .txt file.";
+		message = "Wrong file type; please upload a .txt file.";
 		styles = {
 			backgroundColor: "#FF6D6A",
 		};
