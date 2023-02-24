@@ -181,3 +181,21 @@ body {
 	text-align: center;
 	font-size: 1rem;
 }
+ /**** FETCH PRICES ****/
+ .fetch-button {
+    cursor: pointer;
+	color: #75c435;
+	background-color: #222222;
+	border: 1px solid #84a59d;
+	border-radius: 5px;
+	font-family: "Roboto", sans-serif;
+	font-size: 1rem;
+	font-weight: 600;
+	letter-spacing: 1px;
+	padding: 10px;
+ }
+
+ .fetch-button:hover {
+    transition: all 0.1s ease-in-out;
+	transform: scale(0.95);
+ }

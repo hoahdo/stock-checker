@@ -15,21 +15,13 @@ function Upload() {
 		let month = localDate.getMonth() + 1;
 		let day = localDate.getDate();
 
-		month.toString().length == 1
-        ? (month = `0${month}`)
-        : (month = `${month}`);
-        
-		day.toString().length == 1
-        ? (day = `$0${day}`)
-        : (day = `${day}`);
+		month.toString().length == 1 ? (month = `0${month}`) : (month = `${month}`);
+
+		day.toString().length == 1 ? (day = `$0${day}`) : (day = `${day}`);
 
 		let currentDate = `${year}-${month}-${day}`;
 		return currentDate;
 	});
-
-	useEffect(() => {
-		console.log(fileData);
-	}, [fileData]);
 
 	function updateFileName(newFileName) {
 		setFileName(newFileName);
@@ -47,10 +39,10 @@ function Upload() {
 		setFileIcon(newFileIcon);
 	}
 
-    function updateCheckDate(event) {
-        const {value} = event.target
-        setCheckDate(value)
-    }
+	function updateCheckDate(event) {
+		const { value } = event.target;
+		setCheckDate(value);
+	}
 
 	function removeFile() {
 		setFileName("No file uploaded");
@@ -61,10 +53,7 @@ function Upload() {
 
 	return (
 		<main className="upload--container">
-            <SetDate
-                defaultDate={checkDate} 
-                updateCheckDate={updateCheckDate}    
-            />
+			<SetDate defaultDate={checkDate} updateCheckDate={updateCheckDate} />
 			<DropBox
 				updateFileName={updateFileName}
 				updateFileData={updateFileData}
@@ -78,7 +67,7 @@ function Upload() {
 				fileIcon={fileIcon}
 				removeFile={removeFile}
 			/>
-			{fileType === "text/plain" ? <FetchPrices /> : ""}
+			{fileType === "text/plain" ? <FetchPrices fileType={fileType} /> : ""}
 		</main>
 	);
 }

@@ -25,9 +25,9 @@ function DropBox({
 	function handleDrop(event) {
 		const dropbox = document.getElementById("dropbox");
 		dropbox.classList.remove("upload-field-hover");
-		event.preventDefault();
 		const file = event.dataTransfer.files[0];
 		readUploadedFile(file);
+		event.preventDefault();
 	}
 
 	function uploadFile(event) {
