@@ -24,7 +24,8 @@ function hoursToSecs(hours) {
 function formatFileTickers(tickers) {
 	let tickersArr = tickers.split("\r\n");
 	for (let i = 0; i < tickersArr.length; i++) {
-		tickersArr[i] = tickersArr[i].trim();
+        tickersArr[i] = tickersArr[i].trim();
+        tickersArr[i] = tickersArr[i].toUpperCase();
 	}
 	tickersArr = tickersArr.filter((ticker) => ticker != "");
 	return tickersArr;

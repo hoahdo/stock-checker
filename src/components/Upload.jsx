@@ -12,7 +12,7 @@ function Upload() {
 	const [fileIcon, setFileIcon] = useState("missing");
 	const [checkDate, setCheckDate] = useState(() => getCurrentDate());
 
-    // console.log(fileData)
+    console.log(fileType)
 
 	function updateFileName(newFileName) {
 		setFileName(newFileName);
