@@ -21,4 +21,13 @@ function hoursToSecs(hours) {
 	return hours;
 }
 
-export { getCurrentDate, dateToUnixTime, hoursToSecs };
+function formatFileTickers(tickers) {
+	let tickersArr = tickers.split("\r\n");
+	for (let i = 0; i < tickersArr.length; i++) {
+		tickersArr[i] = tickersArr[i].trim();
+	}
+	tickersArr = tickersArr.filter((ticker) => ticker != "");
+	return tickersArr;
+}
+
+export { getCurrentDate, dateToUnixTime, hoursToSecs, formatFileTickers };

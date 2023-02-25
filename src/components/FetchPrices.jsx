@@ -13,10 +13,9 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 
 	function getStockPrice() {
 		client
-			.stockCandles("AAPL","D",timeFrom,timeTo )
+			.stockCandles("aApL","D",timeFrom,timeTo )
 			.then((res) => console.log(res.data));
 	}
-
 
 
 	return (
@@ -34,7 +33,6 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 					""
 				))
 			}
-			<p>{stockData}</p>
 		</div>
 	);
 }

@@ -7,10 +7,12 @@ import { getCurrentDate } from "./utils";
 
 function Upload() {
 	const [fileName, setFileName] = useState("No file uploaded");
-	const [fileData, setFileData] = useState("");
+	const [fileData, setFileData] = useState([]);
 	const [fileType, setFileType] = useState("");
 	const [fileIcon, setFileIcon] = useState("missing");
 	const [checkDate, setCheckDate] = useState(() => getCurrentDate());
+
+    // console.log(fileData)
 
 	function updateFileName(newFileName) {
 		setFileName(newFileName);
@@ -35,7 +37,7 @@ function Upload() {
 
 	function removeFile() {
 		setFileName("No file uploaded");
-		setFileData("");
+		setFileData([]);
 		setFileType("");
 		setFileIcon("missing");
 	}

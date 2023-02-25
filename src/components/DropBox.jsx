@@ -1,3 +1,5 @@
+import { formatFileTickers } from "./utils";
+
 function DropBox({
 	updateFileName,
 	updateFileData,
@@ -37,23 +39,21 @@ function DropBox({
 
 	function readUploadedFile(file) {
 		let readFile = new FileReader();
-
 		updateFileName(file.name);
 		updateFileType(file.type);
-
 		if (file.type === "text/plain") {
 			updateFileIcon("correct");
+			readFile.readAsText(file);
+			readFile.onload = () => {
+				const tickers = readFile.result;
+				const formattedTickers = formatFileTickers(tickers);
+				updateFileData(formattedTickers);
+			};
+			readFile.onerror = () => console.log(readFile.error);
 		} else {
 			updateFileIcon("wrong");
+			updateFileData([]);
 		}
-
-		readFile.readAsText(file);
-
-		readFile.onload = () => {
-			updateFileData(readFile.result);
-		};
-
-		readFile.onerror = () => console.log(readFile.error);
 	}
 
 	return (
