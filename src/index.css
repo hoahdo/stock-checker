@@ -179,6 +179,7 @@ body {
 	padding: 5px;
 	text-align: center;
 	font-size: 1rem;
+	font-weight: 500;
 }
 /**** FETCH PRICES ****/
 .fetch-prices-container {
@@ -206,12 +207,17 @@ body {
 	transform: scale(0.95);
 }
 
+.processing-label {
+	font-size: 1.05rem;
+	font-weight: 400;
+}
+
 /**** FINNHUB ****/
 .finnhub-container {
-    border: solid 2px black;
-    border-radius: 25px;
-    padding: 20px;
-    background-color: #f5f5f5;
+	border: solid 2px black;
+	border-radius: 25px;
+	padding: 20px;
+	background-color: #f5f5f5;
 }
 
 .stock-items-title,
@@ -227,14 +233,14 @@ body {
 	border-bottom: 1px solid black;
 	padding: 10px 5px 10px 20px;
 	width: 100px;
-    font-size: 1rem;
+	font-size: 1rem;
 }
 
 .stock-items-title p {
-    font-weight: 800;
-    letter-spacing: 1px;
+	font-weight: 800;
+	letter-spacing: 1px;
 }
 
 .stock-item p {
-    font-weight: 500;
+	font-weight: 500;
 }

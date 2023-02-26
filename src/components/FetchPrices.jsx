@@ -8,8 +8,15 @@ const client = finnhubClient(apiKey);
 
 function FetchPrices({ fileType, fileData, checkDate }) {
 	const [stockData, setStockData] = useState([]);
+	const [loading, setLoading] = useState(false);
+
+	useEffect(() => {
+		setStockData([]);
+	}, [fileData, checkDate]);
 
 	async function getStockPrice() {
+		setStockData([]);
+		setLoading(true);
 		let timeFrom = dateToUnixTime(checkDate) + hoursToSecs(8);
 		let timeTo = dateToUnixTime(checkDate) + hoursToSecs(20);
 		const tickerInfo = fileData.map(async (ticker, index) => {
@@ -19,8 +26,9 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 				const data = {
 					ticker,
 					high: res.data.h[0].toFixed(2),
-					low: res.data.l[0].toFixed(2)
+					low: res.data.l[0].toFixed(2),
 				};
+				console.log(data);
 				return data;
 			} catch (error) {
 				const data = {
@@ -28,11 +36,13 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 					high: "NaN",
 					low: "NaN",
 				};
+				console.log(data);
 				return data;
 			}
 		});
 		const infos = await Promise.allSettled(tickerInfo);
 		setStockData(infos);
+		setLoading(false);
 	}
 
 	return (
@@ -50,6 +60,7 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 					""
 				))
 			}
+			{loading ? <p className="processing-label">Processing. . .</p> : ""}
 			{stockData.length > 0 ? <Finnhub stockData={stockData} /> : ""}
 		</div>
 	);
