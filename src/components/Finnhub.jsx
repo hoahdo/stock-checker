@@ -10,9 +10,18 @@ function Finnhub({ stockData }) {
 		);
 	});
 
+	const tickerTitle = (
+		<div className="stock-items-title">
+			<p>TICKER</p>
+			<p>HIGH</p>
+			<p>LOW</p>
+		</div>
+	);
+
 	return (
-		<div>
-			<div className="stock-items-container">{stockItems}</div>
+		<div className="finnhub-container">
+			{tickerTitle}
+			<div>{stockItems}</div>
 		</div>
 	);
 }
