@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Finnhub from "./Finnhub";
 import { finnhubClient } from "react-finnhub";
 import { dateToUnixTime, hoursToSecs } from "./utils";
 
@@ -6,18 +7,7 @@ const apiKey = import.meta.env.VITE_API_KEY;
 const client = finnhubClient(apiKey);
 
 function FetchPrices({ fileType, fileData, checkDate }) {
-	const [stockData, setStockData] = useState();
-	const [dataFetched, setDataFetched] = useState(false);
-	/////////////////////////////////////////////////////////////////////////////
-
-	// console.log(stockData)
-
-	// useEffect(() => {
-	//     if (dataFetched) {
-	//         StockTickers()
-	//         console.log("effect ran");
-	//     }
-	// }, [stockData]);
+	const [stockData, setStockData] = useState([]);
 
 	async function getStockPrice() {
 		let timeFrom = dateToUnixTime(checkDate) + hoursToSecs(8);
@@ -28,41 +18,25 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 				const res = await client.stockCandles(ticker, "D", timeFrom, timeTo);
 				const data = {
 					ticker,
-					high: res ? res.data.h[0] : NaN,
-					low: res ? res.data.l[0] : NaN,
+					high: res.data.h[0].toFixed(2),
+					low: res.data.l[0].toFixed(2)
 				};
 				return data;
 			} catch (error) {
 				const data = {
 					ticker,
-					high: NaN,
-					low: NaN,
+					high: "NaN",
+					low: "NaN",
 				};
 				return data;
 			}
 		});
 		const infos = await Promise.allSettled(tickerInfo);
 		setStockData(infos);
-		// setDataFetched(true);
 	}
-	console.log(stockData);
-
-	/////////////////////////////////////////////////////////////////////////////
-
-	const StockTickers = () =>
-		stockData.map((item, index) => {
-			const { ticker, high, low } = item.value;
-			return (
-				<div>
-					<p>Symbol: {ticker}</p>
-					<p>High: ${high}</p>
-					<p>Low: ${low}</p>
-				</div>
-			);
-		});
 
 	return (
-		<div>
+		<div className="fetch-prices-container">
 			{
 				(fileType = "text/plain" ? (
 					<button
@@ -76,7 +50,7 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 					""
 				))
 			}
-			<p>Below This Line</p>
+			{stockData.length > 0 ? <Finnhub stockData={stockData} /> : ""}
 		</div>
 	);
 }
