@@ -26,16 +26,16 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 				await new Promise((resolve) => setTimeout(resolve, 1250 * index));
 				const res = await client.stockCandles(ticker, "D", timeFrom, timeTo);
 				const data = {
-					TICKER: ticker,
-					HIGH: res.data.h[0].toFixed(2),
-					LOW: res.data.l[0].toFixed(2),
+					ticker,
+					high: res.data.h[0].toFixed(2),
+					low: res.data.l[0].toFixed(2),
 				};
 				return data;
 			} catch (error) {
 				const data = {
-					TICKER: ticker,
-					HIGH: "NaN",
-					LOW: "NaN",
+					ticker,
+					high: "NaN",
+					low: "NaN",
 				};
 				return data;
 			}

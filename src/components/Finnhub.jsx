@@ -1,11 +1,11 @@
 function Finnhub({ stockData }) {
 	const stockItems = stockData.map((item, key) => {
-		const { TICKER, HIGH, LOW } = item.value;
+		const { ticker, high, low } = item.value;
 		return (
 			<div key={key} className="stock-item">
-				<p>{TICKER}</p>
-				<p>{HIGH}</p>
-				<p>{LOW}</p>
+				<p>{ticker}</p>
+				<p>{high}</p>
+				<p>{low}</p>
 			</div>
 		);
 	});

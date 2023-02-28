@@ -258,3 +258,23 @@ body {
 .stock-item p {
 	font-weight: 500;
 }
+
+/**** EXPORT EXCEL ****/
+.export-button {
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 10px;
+    background-color: #217346;
+    color: #ffffff;
+    border-style: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.export-button:hover {
+	transition: all 0.1s ease-in-out;
+	transform: scale(0.95);
+}
