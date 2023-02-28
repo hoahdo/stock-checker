@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Finnhub from "./Finnhub";
+import ExportExcel from "./ExportExcel";
 import { finnhubClient } from "react-finnhub";
 import { dateToUnixTime, hoursToSecs } from "./utils";
 
@@ -59,7 +60,8 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 				) : (
 					""
 				))
-			}
+            }
+            <ExportExcel />
 			{loading ? <p className="processing-label">Processing. . .</p> : ""}
 			{stockData.length > 0 ? <Finnhub stockData={stockData} /> : ""}
 		</div>
