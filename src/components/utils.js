@@ -4,7 +4,7 @@ function getCurrentDate() {
 	let month = localDate.getMonth() + 1;
 	let day = localDate.getDate();
 	month.toString().length == 1 ? (month = `0${month}`) : (month = `${month}`);
-	day.toString().length == 1 ? (day = `$0${day}`) : (day = `${day}`);
+	day.toString().length == 1 ? (day = `0${day}`) : (day = `${day}`);
 	let currentDate = `${year}-${month}-${day}`;
 	return currentDate;
 }

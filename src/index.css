@@ -225,11 +225,6 @@ body {
 	padding: 10px;
 }
 
-.processing-label {
-	font-size: 1.05rem;
-	font-weight: 400;
-}
-
 /**** FINNHUB ****/
 .finnhub-container {
 	border: solid 2px black;
@@ -272,8 +267,37 @@ body {
 	letter-spacing: 1px;
 	padding: 10px;
 	background-color: #217346;
-	color: #ffffff;
 	border-style: none;
 	border-radius: 5px;
 	width: 300px;
+	color: #eee;
+	text-shadow: -1px 0 #555, 0 1px #555, 1px 0 #555, 0 -1px #555;
+}
+
+/**** LOADING BAR ****/
+.loading-container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.loading-label {
+	font-size: 1.05rem;
+	font-weight: 500;
+	color: #303030;
+}
+
+.loading-percent {
+	font-weight: 500;
+	color: #303030;
+}
+
+.loading-bar {
+	overflow: hidden;
+	width: 300px;
+	height: 25px;
+	border-radius: 10px;
+	background-color: #eeeeee;
+	border: solid 2px #78a2cc;
+	padding: 3px;
 }
