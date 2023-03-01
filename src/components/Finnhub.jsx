@@ -1,4 +1,6 @@
-function Finnhub({ stockData }) {
+import ExportExcel from "./ExportExcel";
+
+function Finnhub({ stockData, excelData, checkDate }) {
 	const stockItems = stockData.map((item, key) => {
 		const { ticker, high, low } = item.value;
 		return (
@@ -19,9 +21,12 @@ function Finnhub({ stockData }) {
 	);
 
 	return (
-		<div className="finnhub-container">
-			{tickerTitle}
-			<div>{stockItems}</div>
+		<div>
+			<div className="finnhub-container">
+				<ExportExcel excelData={excelData} checkDate={checkDate} />
+				{tickerTitle}
+				<div>{stockItems}</div>
+			</div>
 		</div>
 	);
 }

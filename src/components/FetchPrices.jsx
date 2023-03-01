@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import ExportExcel from "./ExportExcel";
 import LoadingBar from "./LoadingBar";
 import Finnhub from "./Finnhub";
 import { finnhubClient } from "react-finnhub";
@@ -69,14 +68,16 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 					""
 				))
 			}
-
 			{loading ? <LoadingBar loading={loading} fileData={fileData} /> : ""}
-			{excelData.length > 0 ? (
-				<ExportExcel excelData={excelData} checkDate={checkDate} />
+			{stockData.length > 0 ? (
+				<Finnhub
+					stockData={stockData}
+					excelData={excelData}
+					checkDate={checkDate}
+				/>
 			) : (
 				""
 			)}
-			{stockData.length > 0 ? <Finnhub stockData={stockData} /> : ""}
 		</div>
 	);
 }
