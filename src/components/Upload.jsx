@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import About from "./About";
 import SetDate from "./SetDate";
 import DropBox from "./DropBox";
 import Files from "./Files";
@@ -41,7 +42,8 @@ function Upload() {
 	}
 
 	return (
-		<main className="upload--container">
+        <main className="upload--container">
+            <About />
 			<SetDate defaultDate={checkDate} updateCheckDate={updateCheckDate} />
 			<DropBox
 				updateFileName={updateFileName}

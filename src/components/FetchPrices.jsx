@@ -41,9 +41,9 @@ function FetchPrices({ fileType, fileData, checkDate }) {
 				return data;
 			}
 		});
-		const infos = await Promise.allSettled(tickerInfo);
-		setStockData(infos);
-		formatToExcel(infos);
+		const candleData = await Promise.allSettled(tickerInfo);
+		setStockData(candleData);
+		formatToExcel(candleData);
 		setLoading(false);
 	}
 

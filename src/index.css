@@ -28,7 +28,7 @@ body {
 	background-color: #303030;
 	text-align: center;
 	padding: 20px;
-	margin-bottom: 20px;
+	margin-bottom: 5px;
 }
 
 .header--container h1 {
@@ -44,12 +44,27 @@ body {
 	background-color: #303030;
 	bottom: 0;
 	width: 100%;
-	padding: 5px;
 	text-align: center;
+	padding: 5px;
 }
 
 .footer-text {
 	color: whitesmoke;
+}
+
+/**** ABOUT ****/
+.about-title {
+	text-align: center;
+}
+
+.list-container {
+	max-width: 350px;
+}
+
+.list-container li {
+	padding: 10px;
+	font-weight: 500;
+	letter-spacing: 0.5px;
 }
 
 /**** DATE ****/
@@ -94,7 +109,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	margin: 0px 5% 20px 5%;
+	margin: 0px 5% 35px 5%;
 }
 
 /**** DROPBOX ****/
@@ -106,7 +121,7 @@ body {
 	flex-direction: column;
 	border: 2px dashed #84a59d;
 	border-radius: 10px;
-	height: 300px;
+	height: 250px;
 	width: 80%;
 }
 
