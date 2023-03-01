@@ -1,3 +1,4 @@
+import UploadIcon from "../assets/upload-icon.png";
 import { formatFileTickers } from "./utils";
 
 function DropBox({
@@ -65,7 +66,7 @@ function DropBox({
 			onDragOver={(event) => handleDragOver(event)}
 			onDrop={(event) => handleDrop(event)}
 		>
-			<img src="../assets/upload-icon.png" className="upload-icon" />
+			<img src={UploadIcon} className="upload-icon" />
 			<p>Drag and drop files here</p>
 			<div className="upload-or-container">
 				<hr />
