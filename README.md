@@ -41,6 +41,17 @@ You will need `npm` and `vite` installed globally on your machine.
  3. Start development server `npx vite`
   
 
+<!--- Usage Section --->
+
+## Usage
+### Selecting the date
+
+### Uploading the file
+
+### Fetching the data
+
+### Exporting as excel
+
 <!--- Contributing Section--->
 
 ## Contributing
