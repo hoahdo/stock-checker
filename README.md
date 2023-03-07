@@ -49,17 +49,23 @@ You will need `npm` and `vite` installed globally on your machine.
 <!--- Usage Section --->
 
 ## Usage
+
 ### Uploading the file
+
 <img src="https://user-images.githubusercontent.com/94433620/223334763-afa2fbe0-8f10-4278-a858-1927c50d0d4e.png" width="300"/>
+
 <img src="https://user-images.githubusercontent.com/94433620/223316567-e8abb609-dd0e-4cfc-9dad-a53766c8b0de.png" width="300"/>
 
 ### Selecting the date
+
 <img src="https://user-images.githubusercontent.com/94433620/223316561-2fac266a-61d5-44bb-bd4f-fad20c8a4636.png" width="300"/>
 
 ### Fetching the data
+
 <img src="https://user-images.githubusercontent.com/94433620/223316580-c79090b2-fdcb-44c5-b0b3-04609d9b6737.png" width="300"/>
 
 ### Exporting as excel
+
 <img src="https://user-images.githubusercontent.com/94433620/223316585-2340595e-7dd0-42af-b642-11d01562f55f.png" width="300"/>
 
 
