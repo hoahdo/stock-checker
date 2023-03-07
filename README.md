@@ -112,6 +112,7 @@ Things I learned:
 ## Resources
 
 * https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
+* https://javascript.info/file
 * https://design.gs.com/patterns/drag-and-drop
 * https://stackoverflow.com/questions/61569652/how-to-make-multiple-api-calls-with-a-delay-between-each-in-node-js
 * https://stackoverflow.com/questions/70709987/how-to-load-environment-variables-from-env-file-using-vite
