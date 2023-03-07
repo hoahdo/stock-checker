@@ -6,6 +6,10 @@
 	<a href="https://admirable-baklava-19e12f.netlify.app/">Live App Link</a> &#x2022 <a href="https://github.com/hoahdo/stock-checker">GitHub Repo Link</a>
 </div>
 
+<br/>
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/94433620/223315141-63b11380-8ce7-42e9-8df6-340fc2888635.png" width="700"/>
+</p>
 
 <!--- About Section --->
 
@@ -44,23 +48,29 @@ You will need `npm` and `vite` installed globally on your machine.
 <!--- Usage Section --->
 
 ## Usage
+
 ### Selecting the date
+<img src="https://user-images.githubusercontent.com/94433620/223316561-2fac266a-61d5-44bb-bd4f-fad20c8a4636.png" width="300"/>
 
 ### Uploading the file
-
+<img src="https://user-images.githubusercontent.com/94433620/223316567-e8abb609-dd0e-4cfc-9dad-a53766c8b0de.png" width="300"/>
+ 
 ### Fetching the data
+<img src="https://user-images.githubusercontent.com/94433620/223316580-c79090b2-fdcb-44c5-b0b3-04609d9b6737.png" width="300"/>
 
 ### Exporting as excel
+<img src="https://user-images.githubusercontent.com/94433620/223316585-2340595e-7dd0-42af-b642-11d01562f55f.png" width="300"/>
+
 
 <!--- Contributing Section--->
 
 ## Contributing
 
-1. Fork this repo [ https://github.com/hoahdo/stock-checker/fork ]
-2. Create your feature branch [ `git checkout -b my-new-feature` ]
-3. Commit your changes [ `git commit -m 'Add some feature'` ]
-4. Push to the branch [ `git push origin my-new-feature` ]
-5. Create a new Pull Request [ https://github.com/hoahdo/stock-checker/pulls ]
+1. Fork this repo:  https://github.com/hoahdo/stock-checker/fork 
+2. Create your feature branch:  `git checkout -b my-new-feature` 
+3. Commit your changes:  `git commit -m 'Add some feature'` 
+4. Push to the branch:  `git push origin my-new-feature` 
+5. Create a new pull request:  https://github.com/hoahdo/stock-checker/pulls 
 
 
 <!--- Status Section --->
