@@ -35,6 +35,10 @@ This web application was created to allow users to check the highs and lows of a
   
   [Finnhub API](https://finnhub.io/docs/api)
 
+* Other
+
+  <img src="https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E"/>
+  <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white"/>
 
 <!--- Installation & Setup Section --->
 
